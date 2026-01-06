@@ -6,13 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+  <div style="text-align:right;padding:10px;">
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('bn')">বাংলা</button>
+</div>
 <body>
 <!-- HERO -->
 <div class="hero">
-  <h1>Humanitarian Foundation</h1>
-  <p>Standing beside humanity with compassion & action</p>
-  <a href="donate.html" class="btn">Donate Now</a>
-  <a href="contact.html" class="btn">Join Us</a>
+  <h1 id="title">Humanitarian Foundation</h1>
+  <p id="subtitle">Standing beside humanity with compassion & action</p>
+  <a href="donate.html" class="btn" id="donateBtn">Donate Now</a>
 </div>
 
 <!-- NAV -->
@@ -42,7 +45,19 @@
     </div>
   </div>
 </div>
-
+<script>
+function setLang(lang){
+  if(lang==='bn'){
+    title.innerText='হিউম্যানিটারিয়ান ফাউন্ডেশন';
+    subtitle.innerText='মানবতার পাশে দাঁড়ানোই আমাদের অঙ্গীকার';
+    donateBtn.innerText='দান করুন';
+  }else{
+    title.innerText='Humanitarian Foundation';
+    subtitle.innerText='Standing beside humanity with compassion & action';
+    donateBtn.innerText='Donate Now';
+  }
+}
+</script>
 <footer>
   <p>© 2026 Humanitarian Foundation | Serving Humanity</p>
 </footer>
